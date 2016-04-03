@@ -1,0 +1,21 @@
+<html>
+<body>
+<script src="numeric.js"></script>
+<script>
+function print(name, M) {
+	document.write("=========="+name+"============\n");
+	document.write(numeric.prettyPrint(M)+"\n");
+}
+document.write('<pre>');
+var A = [[1,2,3],[3,2,3],[4,3,5]];
+print("A",A);
+
+var iA = numeric.inv(A);
+print("iA",iA)
+
+var AiA = numeric.dot(A,iA);
+print("A*iA", AiA);
+document.write('</pre>');
+</script>
+</body>
+</html>
